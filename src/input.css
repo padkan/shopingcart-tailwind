@@ -6,6 +6,11 @@
   .py-navbar-item {
     @apply py-4;
   }
+  .navbar-item {
+    @apply text-white;
+    @apply hover:text-slate-200;
+  }
+
   .py-navbar-mobile-item {
     @apply py-2;
   }
@@ -52,6 +57,7 @@
   @apply shadow-md;
   @apply hover:bg-cyan-700;
   @apply active:bg-cyan-800;
+  @apply rounded-md;
 }
 
 .wysiwyg-editor table {
@@ -68,4 +74,20 @@
 h4,
 h5 {
   @apply mt-6 font-bold;
+}
+a {
+  @apply text-cyan-600;
+}
+a:hover {
+  @apply text-cyan-700;
+}
+.btn-pay {
+  @apply px-4 py-2;
+  @apply text-white;
+  @apply transition-colors;
+  @apply bg-violet-600;
+  @apply shadow-md;
+  @apply hover:bg-violet-700;
+  @apply active:bg-violet-800;
+  @apply rounded-md;
 }

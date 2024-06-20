@@ -488,111 +488,148 @@
       </button>
     </header>
 
-    <div class="container py-5 mx-auto lg:w-2/3">
-      <div class="p-5">
-        <h1 class="mb-2 text-3xl font-bold">My Cart Items</h1>
-        <div class="p-3 bg-white rounded-lg">
-          <div>
-            <!-- cart item -->
-            <div class="flex flex-col items-center gap-4 sm:flex-row">
-              <img src="/src/images/camera.jpg" alt="product" class="w-24" />
-              <div class="flex flex-col justify-between w-full">
-                <div class="flex items-center justify-between mb-3">
-                  <h3 class="">Cannon EOS 80D DSLR Camera</h3>
-                  <span class="">&euro;929.99</span>
-                </div>
-                <div class="flex items-center justify-between gap-10">
-                  <div class="flex items-center">
-                    Qty:
-                    <select
-                      name=""
-                      id=""
-                      class="py-1 ml-3 border border-grey-200"
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                  <a href="#" class="text-cyan-600 hover:text-cyan-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- /cart item -->
-            <hr class="my-3" />
-            <!-- cart item -->
-            <div class="flex flex-col items-center gap-4 sm:flex-row">
-              <img src="/src/images/alexa.jpg" alt="product" class="w-24" />
-              <div class="flex flex-col justify-between w-full">
-                <div class="flex items-center justify-between mb-3">
-                  <h3 class="">
-                    Amazon Echo Dot 3rd Generation Echo Dot 3rd Generation Echo
-                    Dot 3rd Generation
-                  </h3>
-                  <span class="">&euro;29.99</span>
-                </div>
-                <div class="flex items-center justify-between gap-10">
-                  <div class="flex items-center">
-                    Qty:
-                    <select
-                      name=""
-                      id=""
-                      class="py-1 ml-3 border border-grey-200"
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                  <a href="#" class="text-cyan-600 hover:text-cyan-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- /cart item -->
-          </div>
-          <div
-            class="flex justify-between gap-5 pt-5 mt-5 border-t border-grey-300"
-          >
-            <div class="flex justify-between">
-              <span class="font-bold">Subtotal</span>
-              <span>&euro;165.87</span>
-            </div>
-            <p>Shipping and tax will be applied on checkout</p>
-          </div>
-          <button class="w-full mt-3 btn-primary">Checkout</button>
-        </div>
+    <div class="container p-5 mx-auto lg:w-2/3">
+      <h1 class="mb-2 text-3xl font-bold">My Orders</h1>
+      <div class="p-3 overflow-x-auto bg-white rounded-lg">
+        <table class="w-full table-auto">
+          <thead>
+            <tr class="border-b-2">
+              <th class="p-2 text-left">Order ID</th>
+              <th class="p-2 text-left">Date</th>
+              <th class="p-2 text-left">Shipping Status</th>
+              <th class="p-2 text-left">Paying Status</th>
+              <th class="p-2 text-left">SubTotal</th>
+              <th class="p-2 text-left">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-2 px-2">
+                <a href="/src/order-details.html">1234</a>
+              </td>
+              <td class="p-2 px-2 whitespace-nowrap">2021-09-01</td>
+              <td class="p-2 px-2">
+                <span class="px-2 py-1 text-white rounded-md bg-emerald-400"
+                  >Delivered</span
+                >
+              </td>
+              <td class="p-2 px-2">
+                <span class="px-2 py-1 text-white bg-gray-400 rounded-md"
+                  >Unpaid</span
+                >
+                <!-- <span class="px-2 py-1 text-white bg-orange-400 rounded-md"
+                    >Pending</span
+                  >
+                  <span class="px-2 py-1 text-white bg-red-400 rounded-md"
+                    >Unpaid</span
+                  > -->
+                <!-- <span class="px-2 py-1 text-white rounded-md bg-emerald-400"
+                    >Paid</span
+                  > -->
+              </td>
+              <td class="p-2 px-2">&euro;1000</td>
+              <td class="flex gap-2 w-[200px] p-2 px-2">
+                <a
+                  class="flex items-center btn btn-primary whitespace-nowrap"
+                  href="/src/order.html"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                    />
+                  </svg>
+
+                  View Invoice</a
+                >
+                <a
+                  class="flex items-center btn btn-pay whitespace-nowrap"
+                  href="/src/order.html"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                  Pay</a
+                >
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-2 px-2">
+                <a href="/src/order-details.html">1234</a>
+              </td>
+              <td class="p-2 px-2 whitespace-nowrap">2021-09-01</td>
+              <td class="p-2 px-2">
+                <span class="px-2 py-1 text-white rounded-md bg-emerald-400"
+                  >Delivered</span
+                >
+              </td>
+              <td class="p-2 px-2">
+                <span class="px-2 py-1 text-white bg-red-400 rounded-md"
+                  >Unpaid</span
+                >
+              </td>
+              <td class="p-2 px-2">&euro;1000</td>
+              <td class="flex gap-2 w-[200px] p-2 px-2">
+                <a
+                  class="flex items-center btn btn-primary whitespace-nowrap"
+                  href="/src/order.html"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                    />
+                  </svg>
+
+                  View Invoice</a
+                >
+                <a
+                  class="flex items-center btn btn-pay whitespace-nowrap"
+                  href="/src/order.html"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                  Pay</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>
